@@ -1,0 +1,29 @@
+img{
+    height: 100vh;
+    position: fixed;
+}
+
+.outer {
+    width: 100%; /* Change width to be narrower for portrait */
+    height: 1200px; /* Increase height for portrait orientation */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 100%; /* Keep width the same for the inner circle */
+    height: 1200px; /* Keep height the same for the inner circle */
+    margin-top: -50%;
+    border-radius: 50%; /* Keep as a circle */
+    transform: translate(-0%, 0); /* Center the inner element */
+    box-shadow: 0 0 0 500px #FFE4C9; /* Shadow effect */
+}
+
+.message{
+    display:  block;
+    content: "";
+    height: 1000px;
+    background:#ffe4c9;
+    position: relative;
+    margin-top: -30%;
+}
