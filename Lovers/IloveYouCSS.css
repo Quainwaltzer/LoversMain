@@ -13,16 +13,18 @@ html, body{
     font-family: Hello;
     width: 100%;
     height: 100%;
+    background: black;
 }
 
 
 .welcome {
     display: flex;
+    margin: 0 auto;
     position: relative; 
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width:100vw;
+    width:1200px;
     background: black;
     animation: in 1s ease forwards;
 }
@@ -232,7 +234,7 @@ li{
     resize: none;
     width: 1200px;
     margin: 0 auto;
-
+    
 }
 
 .mainBG{
@@ -397,204 +399,13 @@ li{
   .animation2.visible {
     animation: animation2 2s ease forwards;
   }
-/* Media query */
 
-/*@media (min-width: 1650px) and (max-width: 1920px) {
-    .outer {
-        width: 100%; 
-        height: 1200px; 
-        overflow: hidden;
-        margin-top: 50%;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 1250px; 
-        margin-top: -20%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -10%;
-    }
-}
 
-@media (min-width: 1316px) and (max-width: 1649px) {
-    .outer {
-        width: 100%; 
-        height: 1000px; 
-        overflow: hidden;
-        margin-top: 50%;
-        margin: 0 auto;
+  @media only screen and (max-height: 500px) {
+    html{
+        display: none;
     }
-    
-    .inner {
-        width: 120%; 
-        height: 1000px; 
-        margin-top: -20%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -10%;
-    }
-}
-
-@media (min-width: 1194px) and (max-width: 1315px) {
-    .outer {
-        width: 100%; 
-        height: 900px; 
-        overflow: hidden;
-        margin-top: 50%;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 900px; 
-        margin-top: -20%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -10%;
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1193px) {
-    .outer {
-        width: 100%; 
-        height:1000px; 
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 1100px; 
-        margin-top: -40%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(-0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -20%;
-    }
-}
-@media (min-width: 990px) and (max-width: 1146px) {
-    .outer {
-        width: 100%; 
-        height:1000px; 
-    
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 1100px; 
-        margin-top: -50%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(-0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -20%;
-    }
-}
-@media (min-width: 990px) and (max-width: 1035px) {
-    .outer {
-        width: 100%; 
-        height:1000px; 
-    
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 1100px; 
-        margin-top: -60%;
-        margin-left: -10%;
-        border-radius: 50%; 
-        transform: translate(-0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -20%;
-    }
-}
-
-@media screen {
-    
-    .outer {
-        width: 100%; 
-        height:1000px; 
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 120%; 
-        height: 1000px; 
-        margin-top: -40%;
-        border-radius: 50%; 
-        transform: translate(-0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    
-    .message{
-        display:  block;
-        content: "";
-        height: 1000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -20%;
-    }
-}*/
-
+  }
 @media (max-height: 750px) {
     .outer {
         width: 100%; 
