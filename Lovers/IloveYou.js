@@ -5,6 +5,7 @@ document.querySelector('.clickButton').addEventListener('click', function() {
     let content = document.querySelector('.content-wrap');
     let main = document.querySelector('.main');
     let bodys = document.querySelector('body');
+   
     texts.forEach(function(text) {
         text.classList.toggle('active'); // Add or remove the class for list items
     });
@@ -14,6 +15,7 @@ document.querySelector('.clickButton').addEventListener('click', function() {
     content.classList.toggle('active');
     main.classList.toggle('activate');
     body.classList.toggle('activate');
+    document.querySelector('.rew').style.display = 'block';
 });
 
  
@@ -37,7 +39,7 @@ document.querySelector('.clickButton').addEventListener('click', function() {
     });
 
     const animatedImages = document.querySelectorAll('.animate-me');
-
+const textLove = document.querySelectorAll('.animate-meTwo')
     const options = {
       root: null,
       rootMargin: '0px',
@@ -57,4 +59,38 @@ document.querySelector('.clickButton').addEventListener('click', function() {
     animatedImages.forEach(image => {
       observer.observe(image);
     });
+    textLove.forEach(loverstext => {
+      observer.observe(loverstext);
+    });
+
+    const text = "Hello bub! Happy 9th Monthsary! Thank you always for being here in my side kahit na minsan trippings or bad mood ako HAHAHAHAHA. Di ako magaling gumawa ng origami or physical things na pang effort, dito nalang sa html. I love you bub! More monthsary to come!";
+let index = 0;
+const speed = 50; // Typing speed in milliseconds
+
+function type() {
+    if (index < text.length) {
+        document.getElementById("typing-effect").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, speed);
+    } else {
+        // Optional: Blink effect for the cursor after typing is complete
+        setInterval(() => {
+            const typingEffect = document.getElementById("typing-effect");
+            typingEffect.style.borderRight = typingEffect.style.borderRight === '2px solid white' ? 'none' : '2px solid white';
+        }, 500);
+    }
+}
+
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            type(); // Start typing when the element is in view
+            observer2.disconnect(); // Stop observing after starting the typing
+        }
+    });
+});
+
+observer2.observe(document.getElementById("typing-effect")); // Observe the typing effect element
+
+
     

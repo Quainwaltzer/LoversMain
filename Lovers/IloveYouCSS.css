@@ -8,12 +8,21 @@
     src: url("../Lovers/Gotham-Font/GothamBold.ttf");
 }
 
-html, body{
+@font-face {
+    font-family: Milk;
+    src: url("../Lovers/White\ Milk.otf");
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
     margin: 0 auto;
     font-family: Hello;
-    width: 100%;
-    height: 100%;
+   width:100%;
+
     background: black;
+
 }
 
 
@@ -23,8 +32,8 @@ html, body{
     position: relative; 
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width:1200px;
+   overflow: hidden;
+    width: 100%;
     background: black;
     animation: in 1s ease forwards;
 }
@@ -131,7 +140,7 @@ li{
     align-items: center;
     
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .content-wrap button{
@@ -148,7 +157,7 @@ li{
     display: flex;
     justify-content:center ;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     animation: faders 1s ease forwards;
 }
@@ -199,7 +208,7 @@ li{
     }
     100%{
         opacity: 0; /* Fade out */
-    transform: translate3d(-30px, 300px, 30px) scale(2); /* Move up and scale */
+    transform: translate3d(-30px, 300px, 30px) scale(3); /* Move up and scale */
     background: transparent;
     display: none;
   
@@ -209,7 +218,7 @@ li{
 
 .welcome button.active {
     position: absolute;
-    left: 47%;
+
     animation: fade-out 1s ease forwards;
 }
 
@@ -219,7 +228,7 @@ li{
     }
     to{
         opacity: 0; /* Fade out */
-        transform: translateY(30px) scale(3); /* Move up and scale */
+        transform: translateY(-30px) scale(3); /* Move up and scale */
         background: transparent;
         display: none;
     }
@@ -232,7 +241,7 @@ li{
 .main{
     display: none;
     resize: none;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     
 }
@@ -240,7 +249,8 @@ li{
 .mainBG{
     background: #f9f9f3;
     width: 100%;
-    margin-bottom: 100px;
+   
+    overflow: hidden;
 }
 
 .main.activate{
@@ -250,11 +260,20 @@ li{
 .rew{
     position: fixed;
     z-index: 2;
-    background: #222;
+    background: red;
     left: 0;
     width: 100%;
-    padding: 15px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
     
+}
+
+.rew h1{
+    height: 10px;
+    font-size: 25px;
+    margin-top: -0.5px;
+    font-family: Gotham;
 }
 
 
@@ -328,22 +347,24 @@ li{
 
 .image-container > img{
     height: auto;
-    width: 1200px;    
+    width: 100%;    
     position: fixed;
+    z-index: 0;
     margin-top: 60px;
 }  
 
 .outer {
     width: 100%; 
-    height: 1000px; 
+    height: 500px; 
     overflow: hidden;
     margin: 0 auto;
+    
 }
 
 .inner {
     width: 110%; 
-    height: 1000px; 
-    margin-top: -30%;
+    height: 500px; 
+    margin-top: -40%;
     margin-left: -5%;
     border-radius: 50%; 
     transform: translate(-0%, 0); 
@@ -353,17 +374,98 @@ li{
 .message{
     display:  block;
     content: "";
-    height: 3000px;
+    height: 4000px;
     background:#ffe4c9;
     position: relative;
-    margin-top: -30%;
-    overflow-x: hidden;
     padding: 50px;
+    top: 81vh;
+    font-family: Milk;
+    text-align: center;
+    font-size: 25px;
 }
 
+.titleHappy, .titleHappy2, .titleHappy3, .titleHappy4{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Milk;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.titleHappy.visible{
+    text-align: center;
+    animation: slideUp 2s ease forwards;
+}
+
+.titleHappy2.visible{
+    animation: slideLeft 2s ease forwards;
+}
+
+.titleHappy3.visible{
+    animation: slideRight 2s ease forwards;
+}
+
+.titleHappy4.visible{
+    animation: slideDown 2s ease forwards;
+}
+
+#typing-effect{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 100px;
+}
+
+
+@keyframes slideUp {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 .picsHar{
     display: flex;
     justify-content: center;
+    margin-bottom: 200px;
 }
 
 .picsHar img{
@@ -379,6 +481,16 @@ li{
   }
   
   .animate-me.visible {
+    opacity: 1;
+  }
+
+  .animate-meTwo {
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: 300px; /* Adjust size as needed */
+  }
+  
+  .animate-meTwo.visible {
     opacity: 1;
   }
   
@@ -401,37 +513,328 @@ li{
   }
 
 
-  @media only screen and (max-height: 500px) {
-    html{
-        display: none;
-    }
+  @media only screen and (max-width: 500px) {
+    
+.welcome .content-wrap .flyText{
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-size: 50px;
+    font-family: Hello;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
   }
-@media (max-height: 750px) {
-    .outer {
-        width: 100%; 
-        height: 1000px; 
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    
-    .inner {
-        width: 110%; 
-        height: 1000px; 
-        margin-top: -40%;
-        margin-left: -5%;
-        border-radius: 50%; 
-        transform: translate(-0%, 0); 
-        box-shadow: 0 0 0 500px #FFE4C9; 
-    }
-    
+
+
+@media (max-height: 700px){
     .message{
-        display:  block;
-        content: "";
-        height: 3000px;
-        background:#ffe4c9;
-        position: relative;
-        margin-top: -40%;
-        overflow-x: hidden;
-        padding: 50px;
+        transform: translateY(20vh);
     }
 }
+
+
+@media (max-height: 550px){
+    .message{
+        transform: translateY(30vh);
+    }
+}
+
+
+@media screen and (max-width: 1450px){
+    .message{
+        top: 70vh;
+    }
+}
+
+@media screen and (max-width: 1235px){
+    .message{
+        top: 60vh;
+    }
+}
+
+@media screen and (max-width: 1055px){
+    .message{
+        top: 50vh;
+    }
+}
+
+@media screen and (max-width: 851px){
+    .message{
+        top: 40vh;
+    }
+}
+
+@media screen and (max-width: 656px){
+    .message{
+        top: 30vh;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+  
+    .image-container img{
+        margin-top: 100px;
+    }
+
+    .rew{
+        height: 70px;
+        padding: 20px;
+    }
+
+    .rew h1{
+        margin-top: 16.5px;
+        margin-right: 50px;
+    }
+
+
+    
+.rewind {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    font-family: Gotham;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    font-size: 18px;
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .rewind:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .rewind:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  .message{
+    top: 35vh;
+    height: 4000px;
+  }
+
+  #typing-effect{
+    font-size: 34px;
+    margin-top: 20px;
+  }
+
+  .picsHar{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .picsHar li:last-child{
+    margin-top: -300px;
+  }
+  @keyframes animation1 {
+    0% { transform: translateX(-100px) rotate(-45deg); }
+    100% { transform: translateX(30px) rotate(-10deg); }
+  }
+  @keyframes animation2 {
+    0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+    100% { transform: translateX(-10px) translateY(100px) rotate(10deg); }
+  }
+}
+
+@media screen and (max-width: 510px) {
+    .message{
+        top: 30vh;
+      }
+    
+      .picsHar{
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+      .picsHar li:last-child{
+        margin-top: -300px;
+      }
+      @keyframes animation1 {
+        0% { transform: translateX(-100px) rotate(-45deg); }
+        100% { transform: translateX(-10px) rotate(-10deg); }
+      }
+      @keyframes animation2 {
+        0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+        100% { transform: translateX(10px) translateY(100px) rotate(10deg); }
+      }
+    }
+
+    @media screen and (max-width: 470px) {
+        .message{
+            top: 30vh;
+          }
+        
+          .picsHar{
+            flex-direction: column;
+            justify-content: center;
+          }
+        
+          .picsHar li:last-child{
+            margin-top: -300px;
+          }
+          @keyframes animation1 {
+            0% { transform: translateX(-100px) rotate(-45deg); }
+            100% { transform: translateX(-30px) rotate(-10deg); }
+          }
+          @keyframes animation2 {
+            0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+            100% { transform: translateX(-30px) translateY(100px) rotate(10deg); }
+          }
+        }
+
+            @media screen and (max-width: 470px) {
+        .message{
+            top: 30vh;
+          }
+        
+          .picsHar{
+            flex-direction: column;
+            justify-content: center;
+          }
+        
+          .picsHar li:last-child{
+            margin-top: -300px;
+          }
+          @keyframes animation1 {
+            0% { transform: translateX(-100px) rotate(-45deg); }
+            100% { transform: translateX(-30px) rotate(-10deg); }
+          }
+          @keyframes animation2 {
+            0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+            100% { transform: translateX(-30px) translateY(100px) rotate(10deg); }
+          }
+        }
+    @media screen and (max-width: 470px) {
+        .message{
+            top: 30vh;
+          }
+        
+          .picsHar{
+            flex-direction: column;
+            justify-content: center;
+          }
+        
+          .picsHar li:last-child{
+            margin-top: -300px;
+          }
+          @keyframes animation1 {
+            0% { transform: translateX(-100px) rotate(-45deg); }
+            100% { transform: translateX(-30px) rotate(-10deg); }
+          }
+          @keyframes animation2 {
+            0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+            100% { transform: translateX(-30px) translateY(100px) rotate(10deg); }
+          }
+        }
+
+        @media screen and (max-width: 440px) {
+            .message{
+                top: 30vh;
+              }
+            
+              .picsHar{
+                flex-direction: column;
+                justify-content: center;
+              }
+            
+              .picsHar li:last-child{
+                margin-top: -300px;
+              }
+              @keyframes animation1 {
+                0% { transform: translateX(-100px) rotate(-45deg); }
+                100% { transform: translateX(-60px) rotate(-10deg); }
+              }
+              @keyframes animation2 {
+                0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+                100% { transform: translateX(-60px) translateY(100px) rotate(10deg); }
+              }
+            }
+            @media screen and (max-width: 380px) {
+                .message{
+                    top: 30vh;
+                  }
+                
+                  .picsHar{
+                    flex-direction: column;
+                    justify-content: center;
+                  }
+                
+                  .picsHar li:last-child{
+                    margin-top: -300px;
+                  }
+                  @keyframes animation1 {
+                    0% { transform: translateX(-100px) rotate(-45deg); }
+                    100% { transform: translateX(-90px) rotate(-10deg); }
+                  }
+                  @keyframes animation2 {
+                    0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+                    100% { transform: translateX(-90px) translateY(100px) rotate(10deg); }
+                  }
+                  .welcome .content-wrap .flyText{
+                    display: flex;
+                    gap: 10px;
+                    color: white;
+                    font-size: 40px;
+                    font-family: Hello;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                }
+                }
+
