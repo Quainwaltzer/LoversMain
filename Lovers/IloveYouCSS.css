@@ -807,7 +807,7 @@ li{
             }
             @media screen and (max-width: 380px) {
                 .message{
-                    top: 30vh;
+                    top: 26vh;
                   }
                 
                   .picsHar{
@@ -844,7 +844,7 @@ li{
                     margin-left: -25px;
                   }
                   .message{
-                      top: 19vh;
+                      top: 16vh;
                       height: 3300px;
                     }
                   
@@ -908,7 +908,7 @@ li{
                     }
                     
                     .message{
-                        top: 16vh;
+                        top: 13vh;
                         height: 3300px;
                       }
                     
