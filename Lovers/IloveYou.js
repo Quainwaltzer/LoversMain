@@ -72,13 +72,7 @@ function type() {
         document.getElementById("typing-effect").innerHTML += text.charAt(index);
         index++;
         setTimeout(type, speed);
-    } else {
-        // Optional: Blink effect for the cursor after typing is complete
-        setInterval(() => {
-            const typingEffect = document.getElementById("typing-effect");
-            typingEffect.style.borderRight = typingEffect.style.borderRight === '2px solid white' ? 'none' : '2px solid white';
-        }, 500);
-    }
+    } 
 }
 
 const observer2 = new IntersectionObserver((entries) => {

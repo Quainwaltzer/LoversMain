@@ -260,7 +260,7 @@ li{
 .rew{
     position: fixed;
     z-index: 2;
-    background: #111;
+    background: red;
     left: 0;
     width: 100%;
     padding: 20px 0px;
@@ -274,7 +274,6 @@ li{
     font-size: 25px;
     margin-top: -0.5px;
     font-family: Gotham;
-    color: white;
 }
 
 
@@ -839,3 +838,131 @@ li{
                 }
                 }
 
+                @media screen and (max-width: 364px) {
+                  .content-wrap{
+                    margin-left: -25px;
+                  }
+                  .message{
+                      top: 23vh;
+                      height: 3300px;
+                    }
+                  
+                    .rew{
+                      height: 50px;
+                    }
+                    .rewind{
+                      font-size: 13px;
+                      width: 150px;
+                      height: 50px;
+                    }
+
+                    .image-container > img{
+                      margin-top: 55px;
+                    }
+
+                    #typing-effect{
+                      font-size: 25px;
+                    }
+                    .titleHappy, .titleHappy2, .titleHappy3, .titleHappy4{
+                      font-size: 30px;
+                      font-weight: bold;
+                      font-family: Milk;
+                      font-style: italic;
+                      text-align: center;
+                      margin: 0 auto;
+                      margin-left: -30px;
+                  }
+                    .picsHar{
+                      flex-direction: column;
+                      justify-content: center;
+                    }
+                  
+                    .picsHar li:last-child{
+                      margin-top: -300px;
+                    }
+                    @keyframes animation1 {
+                      0% { transform: translateX(-100px) rotate(-45deg); }
+                      100% { transform: translateX(-110px) rotate(-10deg); }
+                    }
+                    @keyframes animation2 {
+                      0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+                      100% { transform: translateX(-110px) translateY(100px) rotate(10deg); }
+                    }
+                    .welcome .content-wrap .flyText{
+                      display: flex;
+                      gap: 10px;
+                      color: white;
+                      font-size: 40px;
+                      font-family: Hello;
+                      text-align: center;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 0 auto;
+                  }
+                  }
+  
+                  @media screen and (max-width: 325px) {
+                    .content-wrap{
+                      margin-left: -30px;
+                    }
+                    
+                    .message{
+                        top: 20vh;
+                        height: 3300px;
+                      }
+                    
+                      .rew{
+                        height: 50px;
+                      }
+                      .rewind{
+                        font-size: 13px;
+                        width: 150px;
+                        height: 50px;
+                      }
+  
+                      .image-container > img{
+                        margin-top: 55px;
+                      }
+  
+                      #typing-effect{
+                        font-size: 25px;
+                      }
+                      .titleHappy, .titleHappy2, .titleHappy3, .titleHappy4{
+                        font-size: 30px;
+                        font-weight: bold;
+                        font-family: Milk;
+                        font-style: italic;
+                        text-align: center;
+                        margin: 0 auto;
+                        margin-left: -30px;
+                    }
+                      .picsHar{
+                        flex-direction: column;
+                        justify-content: center;
+                      }
+                    
+                      .picsHar li:last-child{
+                        margin-top: -300px;
+                      }
+                      @keyframes animation1 {
+                        0% { transform: translateX(-100px) rotate(-45deg); }
+                        100% { transform: translateX(-120px) rotate(-10deg); }
+                      }
+                      @keyframes animation2 {
+                        0% { transform: translateX(100px) translateY(100px) rotate(45deg); }
+                        100% { transform: translateX(-120px) translateY(100px) rotate(10deg); }
+                      }
+                      .welcome .content-wrap .flyText{
+                        display: flex;
+                        gap: 10px;
+                        color: white;
+                        font-size: 40px;
+                        font-family: Hello;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto;
+                    }
+                    }
+    
+    
